@@ -4,9 +4,12 @@ import ReactDOM from 'react-dom';
 
 
 const MessageBox = React.createClass({
+  clickHandler(){
+    alert('你点了我一下');
+  },
   render () {
     return (
-      <div> 你好 世界！</div>
+      <div onClick={this.clickHandler}> 你好 世界！</div>
     )
   }
 })
