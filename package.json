@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "my blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasawz/blog.git"
+  },
+  "keywords": [
+    "blog",
+    "react"
+  ],
+  "author": "nasa.wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nasawz/blog/issues"
+  },
+  "homepage": "https://github.com/nasawz/blog#readme",
+  "dependencies": {
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.4"
+  }
+}
