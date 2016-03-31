@@ -22,6 +22,13 @@
   "homepage": "https://github.com/nasawz/blog#readme",
   "dependencies": {
     "babel-core": "^6.7.4",
-    "babel-loader": "^6.2.4"
+    "babel-loader": "^6.2.4",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0"
   }
 }
