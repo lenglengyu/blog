@@ -9,10 +9,38 @@ const MessageBox = React.createClass({
   },
   render () {
     return (
-      <div onClick={this.clickHandler}> 你好 世界！</div>
+      <div>
+        <div onClick={this.clickHandler}> 你好 世界！</div>
+        <SubMessage />
+      </div>
     )
   }
 })
+
+
+const SubMessage = React.createClass({
+  render () {
+    return (
+      <div>
+        <div>写代码也是艺术</div>
+        <Footer />
+      </div>
+    )
+  }
+})
+
+
+const Footer = React.createClass({
+  render () {
+    return (
+      <div>我们用代码在创作</div>
+    )
+  }
+})
+
+
+
+
 
 ReactDOM.render(
   <MessageBox />,
