@@ -6,16 +6,23 @@ import ReactDOM from 'react-dom';
 const MessageBox = React.createClass({
   getInitialState: function() {
     return {
-      message: '你好 世界！(state)'
+      message: '你好 世界！(state)',
+      isVisible: true
     };
   },
   clickHandler(){
-    alert('你点了我一下');
+    this.setState({
+      isVisible: !this.state.isVisible
+    });
   },
   render () {
+    let styleObj = {
+      display: this.state.isVisible?"block":"none"
+    }
     return (
       <div>
-        <h1 onClick={this.clickHandler}> {this.state.message}</h1>
+        <h1 style={ styleObj }> {this.state.message}</h1>
+        <a onClick={this.clickHandler}>点我</a>
         <SubMessage />
       </div>
     )
