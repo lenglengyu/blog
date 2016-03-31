@@ -7,23 +7,20 @@ const MessageBox = React.createClass({
   getInitialState: function() {
     return {
       message: '你好 世界！(state)',
-      isVisible: true
+      clickCount: 0
     };
   },
   clickHandler(){
     this.setState({
-      isVisible: !this.state.isVisible
+      clickCount: this.state.clickCount+1
     });
   },
   render () {
-    let styleObj = {
-      display: this.state.isVisible?"block":"none"
-    }
     return (
       <div>
-        <h1 style={ styleObj }> {this.state.message}</h1>
+        <h1> {this.state.message}</h1>
         <a onClick={this.clickHandler}>点我</a>
-        <SubMessage />
+        <div>你一共点击了我{ this.state.clickCount}下</div>
       </div>
     )
   }
