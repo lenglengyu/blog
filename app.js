@@ -4,10 +4,27 @@ import ReactDOM from 'react-dom';
 
 
 const MessageBox = React.createClass({
+  getInitialState: function() {
+    return {
+      messages:[
+        '大林寺桃花',
+        '白居易',
+        '人间四月芳菲尽，山寺桃花始盛开。',
+        '长恨春归无觅处，不知转入此中来。'
+      ]
+    };
+  },
+  renderMessages(){
+    let i = 0
+    return this.state.messages.map((item) => {
+      i ++
+      return <SubMessage key={i} message={ item }/>
+    })
+  },
   render () {
     return (
       <div>
-        <SubMessage />
+        { this.renderMessages() }
       </div>
     )
   }
