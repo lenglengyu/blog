@@ -12,7 +12,7 @@ global.hashHistory = hashHistory;
 ReactDOM.render(
    <Router history={hashHistory}>
     <Route path="/" component={MessageBox}/>
-    <Route path="/form" component={MyForm}/>
+    <Route path="/form/:name" component={MyForm}/>
   </Router>,
   document.getElementById('container')
 );

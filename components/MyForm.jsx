@@ -13,6 +13,9 @@ const MyForm = React.createClass({
       show: true
     };
   },
+  componentWillMount() {
+      console.log(this.props)
+  },
   componentDidMount: function() {
     // console.log(this.refs.name);
     // console.log(this.refs.name.value);
@@ -21,7 +24,7 @@ const MyForm = React.createClass({
     return (
       <div>
 
-        姓名 <input ref='name' defaultValue='nasa' />
+        姓名 <input ref='name' defaultValue={this.props.params.name} />
 
     <br />
 
