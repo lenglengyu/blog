@@ -3,6 +3,9 @@ import React, { PropTypes } from 'react'
 import SubMessage from "./SubMessage.jsx";
 
 const MessageBox = React.createClass({
+  goForm(){
+    global.hashHistory.push('/form')
+  },
   getInitialState: function() {
     return {
       messages:[
@@ -24,6 +27,8 @@ const MessageBox = React.createClass({
     return (
       <div>
         { this.renderMessages() }
+        <br />
+        <a href="javascript:;" onClick={this.goForm}>go form</a>
       </div>
     )
   }

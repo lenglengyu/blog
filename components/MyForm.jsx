@@ -2,6 +2,9 @@ import React, { PropTypes } from 'react'
 import ReactDOM from "react-dom";
 
 const MyForm = React.createClass({
+  goBack(){
+    global.hashHistory.goBack()
+  },
   getName(){
     return this.refs.name.value
   },
@@ -17,7 +20,12 @@ const MyForm = React.createClass({
   render () {
     return (
       <div>
+
         姓名 <input ref='name' defaultValue='nasa' />
+
+    <br />
+
+    <a href="javascript:;" onClick={this.goBack}>go back</a>
       </div>
     )
   }
