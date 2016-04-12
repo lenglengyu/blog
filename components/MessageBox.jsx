@@ -4,7 +4,7 @@ import SubMessage from "./SubMessage.jsx";
 
 const MessageBox = React.createClass({
   goForm(){
-    global.hashHistory.push('/form/白居易')
+    global.hashHistory.push('/form/白居易?title=大林寺桃花')
   },
   getInitialState: function() {
     return {

@@ -14,7 +14,7 @@ const MyForm = React.createClass({
     };
   },
   componentWillMount() {
-      console.log(this.props)
+      console.log(this.props.location.query.title)
   },
   componentDidMount: function() {
     // console.log(this.refs.name);
