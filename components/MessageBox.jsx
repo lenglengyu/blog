@@ -6,7 +6,14 @@ const MessageBox = React.createClass({
   goForm(){
     global.hashHistory.push('/form/白居易?title=大林寺桃花')
   },
+  getDefaultProps: function() {
+    console.log('0-getDefaultProps');
+    return {
+
+    };
+  },
   getInitialState: function() {
+    console.log('1-getInitialState');
     return {
       messages:[
         '大林寺桃花',
@@ -16,6 +23,12 @@ const MessageBox = React.createClass({
       ]
     };
   },
+  componentWillMount() {
+    console.log('2-componentWillMount');
+  },
+  componentDidMount() {
+    console.log('4-componentDidMount');
+  },
   renderMessages(){
     let i = 0
     return this.state.messages.map((item) => {
@@ -23,7 +36,11 @@ const MessageBox = React.createClass({
       return <SubMessage key={i} message={ item }/>
     })
   },
+  componentWillUnmount(){
+    console.log('5-componentWillUnmount');
+  },
   render () {
+    console.log('3-render');
     return (
       <div>
         { this.renderMessages() }
